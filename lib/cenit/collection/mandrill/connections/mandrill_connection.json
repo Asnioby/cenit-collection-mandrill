@@ -1,0 +1,9 @@
+{
+  "name": "Mandrill Connection",
+  "url": "http://mandrill.cenithub.com",
+  "template_parameters": [
+    {
+      "key": "mandrill_api_key"
+    }
+  ]
+}

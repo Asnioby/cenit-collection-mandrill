@@ -1,0 +1,31 @@
+{
+  "name": "Send Email with Mandrill",
+  "active": true,
+  "discard_events": false,
+  "data_type_scope": "Event source",
+  "last_trigger_timestamps": "2015-04-24 19:00:18 UTC",
+  "event": {
+    "_reference": true,
+    "name": "Communication | Email on created_at"
+  },
+  "translator": {
+    "_reference": true,
+    "name": "Request with CENIT Integration"
+  },
+  "custom_data_type": {
+    "_reference": true,
+    "name": "Email",
+    "schema": {
+      "_reference": true,
+      "uri": "email.json",
+      "library": {
+        "_reference": true,
+        "name": "Communication"
+      }
+    }
+  },
+  "webhook": {
+    "_reference": true,
+    "name": "Mandrill | Send Email"
+  }
+}

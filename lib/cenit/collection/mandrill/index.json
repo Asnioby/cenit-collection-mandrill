@@ -1,0 +1,11 @@
+{
+  "name": "Mandrill CENIT Integration",
+  "category": "Collection",
+  "description": "Mandrill CENIT Integration",
+  "pull_parameters": [
+    {
+      "label": "Mandrill API Key",
+      "parameter": "On connection 'Mandrill Connection' template parameter 'mandrill_api_key'"
+    }
+  ]
+}

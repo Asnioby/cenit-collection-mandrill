@@ -1,0 +1,15 @@
+{
+  "name": "Mandrill Rol",
+  "webhooks": [
+    {
+      "_reference": true,
+      "name": "Mandrill | Send Email"
+    }
+  ],
+  "connections": [
+    {
+      "_reference": true,
+      "name": "Mandrill Connection"
+    }
+  ]
+}

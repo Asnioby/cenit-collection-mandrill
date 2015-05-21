@@ -1,0 +1,6 @@
+{
+  "name": "Mandrill | Send Email",
+  "path": "send_email",
+  "purpose": "send",
+  "method": "post"
+}
