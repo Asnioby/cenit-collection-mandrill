@@ -1,15 +1,7 @@
-require "cenit/collection/mandrill/version"
-
 module Cenit
   module Collection
-    require "cenit/collection/mandrill/build"
+    require File.expand_path(File.join(*%w[ mandrill build ]), File.dirname(__FILE__))
     require "cenit/client"
-
-    # bundle exec irb -I lib -r 'cenit/collection/mandrill'
-    # config = {:push_url => "https://www.cenithub.com/api/v1/push", :connection_token => "My Conn Token", :connection_key => "My Conn Key"}
-    # config = {:push_url => "https://www.cenithub.com/api/v1/push", :user_token => "My User Token", :user_key => "My User Key"}
-    # Cenit::Collection::Mandrill.push_collection config
-    # Cenit::Collection::Mandrill.shared_collection
 
     @mandrill = Cenit::Collection::Mandrill::Build.new
 
@@ -31,7 +23,11 @@ module Cenit
     end
 
     def self.push_sample(model, config)
-      Cenit::Client.push(@mandrill.sample_data(model).to_json, config)
+      Cenit::Client.push(@mandrill.sample_model(model).to_json, config)
+    end
+
+    def self.import(data)
+      @mandrill.import_data(data)
     end
   end
 end
